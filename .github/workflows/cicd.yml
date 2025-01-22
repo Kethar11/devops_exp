@@ -1,17 +1,21 @@
 name: DevOps App CI/CD
 
 on:
- push:
-   branches: [main]
- pull_request:
-   branches: [main]
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
- build:
-   runs-on: ubuntu-latest
-   steps:
-     - uses: actions/checkout@v4
-     - name: Setup Python 3.9
-       uses: actions/setup-python@v3
-       with:
-         python-version: '3.9'
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python 3.9
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.9'
+      - name: List files
+        run: |
+          ls
+          echo "terry is teaching"
