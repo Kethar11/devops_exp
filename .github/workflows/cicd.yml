@@ -46,5 +46,5 @@ jobs:
 
      - name: Print Credentials
        run: |
-           echo "DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }}"
+           echo "DOCKER_NAME=${{ secrets.DOCKER_USERNAME }}"
            echo "DOCKER_PASSWORD=${{ secrets.DOCKER_PASSWORD }}"
